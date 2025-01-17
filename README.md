@@ -1,7 +1,7 @@
 # Weather Alert and Recommendation System
 This project is a cloud-based weather notification system that sends personalized weather alerts and recommendations to users based on their preferences. It uses OpenWeather API to fetch real-time weather data and forecasts and integrates them with a Flask application hosted on Google Cloud.
 
-# Team Member:
+By:
 
 ## Varun Mallela
 
