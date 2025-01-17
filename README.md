@@ -82,6 +82,8 @@ pip install flask mysql-connector-python redis requests
    - **Region:** us-central1
    - **Operating System:** Ubuntu 20.04 LTS
    - **Disk:** 20 GB standard persistent disk
+     
+![VM Instance](images/vm_Instance.png)
 
 ### Step 2: Set Up SQL Database
 
@@ -117,6 +119,8 @@ pip install flask mysql-connector-python redis requests
    );
    ```
 
+![Cloud SQL Instance](images/cloud_sql_instance.png)
+
 ### Step 3: Create Redis Instance
 
 1. Navigate to **MemoryStore > Redis > Create Instance**.
@@ -124,6 +128,8 @@ pip install flask mysql-connector-python redis requests
    - **Name:** weather-redis
    - **Capacity:** 1 GB
    - **Region:** us-central1
+     
+![Redis Instance](images/redis_instance.png)
 
 ### Step 4: Set Up Firewall Rules
 
@@ -150,6 +156,8 @@ Example Job:
 curl -X POST http://<EXTERNAL_IP>:5000/run_hourly_alerts
 ```
 
+![Cloud Scheduler](images/cloud_scheduler.png)
+
 ## Debugging and Testing
 
 ### **API Integration Validation**
@@ -172,6 +180,13 @@ curl -X POST http://<EXTERNAL_IP>:5000/run_hourly_alerts
 ## **System Architecture and Component Interaction**
 
 ### **Architecture Diagram**
+The architectural diagram illustrates interactions between system components, including user preferences, weather data, email notifications, and cloud services. It highlights:
+1. User submission of preferences via Flask API.
+2. Retrieval of weather data from OpenWeather API.
+3. Data storage and retrieval in MySQL and Redis.
+4. Automated execution of scripts via Google Cloud Scheduler.
+5. Notification delivery via SMTP.
+   
 ![System Architecture](images/architecture.png)
 
 ### **Description of the Interaction Between Components**
@@ -201,13 +216,14 @@ curl -X POST http://<EXTERNAL_IP>:5000/run_hourly_alerts
    - Implement SMS alerts using Twilio.
    - Integrate Google Analytics.
 
-## **Screenshots**
+### Flask Web Interface
+- Users set weather preferences via a Flask web page.
 
-- **Flask Web Interface**
-  ![Flask Interface](images/flask_ui.png)
-- **Email Notification Example**
-  ![Email Notification](images/email_alert.png)
-- **Google Cloud Scheduler Logs**
-  ![Scheduler Logs](images/cloud_logs.png)
+![Flask UI](images/flask_ui.png)
+
+### Email Notification Example
+- Users receive email alerts based on weather conditions.
+
+![Email Alert](images/email_alert.png)
 
 
