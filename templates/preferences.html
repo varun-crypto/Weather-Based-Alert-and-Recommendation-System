@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Preferences</h1>
+    <ul>
+        <li><strong>User ID:</strong> {{ preferences.user_id }}</li>
+        <li><strong>City:</strong> {{ preferences.city }}</li>
+        <li><strong>Email:</strong> {{ preferences.email }}</li>
+        <li><strong>Minimum Temperature (°C):</strong> {{ preferences.temp_min }}</li>
+        <li><strong>Maximum Temperature (°C):</strong> {{ preferences.temp_max }}</li>
+        <li><strong>Maximum Wind Speed (m/s):</strong> {{ preferences.wind_max }}</li>
+        <li><strong>Rain Alert:</strong> {{ 'Yes' if preferences.rain_alert == 1 else 'No' }}</li>
+    </ul>
+</body>
+</html>
