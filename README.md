@@ -129,7 +129,7 @@ pip install flask mysql-connector-python redis requests
    - **Capacity:** 1 GB
    - **Region:** us-central1
      
-![Redis Instance](images/redis_instance.jpg)
+![Redis Instance](images/redis_instance.png)
 
 ### Step 4: Set Up Firewall Rules
 
